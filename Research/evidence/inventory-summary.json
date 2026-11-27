@@ -1,0 +1,130 @@
+[
+  {
+    "source": "Builds/BackupPolicy/78b4b1a9-inventory-False.json",
+    "policy": false,
+    "observers": [
+      {
+        "peerId": "368b8f834d114c0a8d62c66976cd2887",
+        "seed": 741901,
+        "udpPort": 47881,
+        "backupsEnabled": false,
+        "backupRevision": 1794073359081,
+        "peers": [
+          {
+            "id": "368b8f834d114c0a8d62c66976cd2887",
+            "local": true,
+            "seedCopies": 12,
+            "primaryRegions": 12,
+            "heldPrimary": 12,
+            "backupCopies": 0,
+            "memoryMatches": true,
+            "savedMatches": false
+          },
+          {
+            "id": "b19c4449f32048b6a0d552565af0506a",
+            "local": false,
+            "seedCopies": 30,
+            "primaryRegions": 30,
+            "heldPrimary": 30,
+            "backupCopies": 0,
+            "memoryMatches": true,
+            "savedMatches": false
+          }
+        ]
+      },
+      {
+        "peerId": "b19c4449f32048b6a0d552565af0506a",
+        "seed": 741901,
+        "udpPort": 47880,
+        "backupsEnabled": false,
+        "backupRevision": 1794073359081,
+        "peers": [
+          {
+            "id": "b19c4449f32048b6a0d552565af0506a",
+            "local": true,
+            "seedCopies": 30,
+            "primaryRegions": 30,
+            "heldPrimary": 30,
+            "backupCopies": 0,
+            "memoryMatches": true,
+            "savedMatches": false
+          },
+          {
+            "id": "368b8f834d114c0a8d62c66976cd2887",
+            "local": false,
+            "seedCopies": 12,
+            "primaryRegions": 12,
+            "heldPrimary": 12,
+            "backupCopies": 0,
+            "memoryMatches": true,
+            "savedMatches": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "Builds/BackupPolicy/78b4b1a9-inventory-True.json",
+    "policy": true,
+    "observers": [
+      {
+        "peerId": "9dc6498ccfc5437cac0a442fdad0ab5b",
+        "seed": 741902,
+        "udpPort": 47881,
+        "backupsEnabled": true,
+        "backupRevision": 1794073374225,
+        "peers": [
+          {
+            "id": "9dc6498ccfc5437cac0a442fdad0ab5b",
+            "local": true,
+            "seedCopies": 42,
+            "primaryRegions": 16,
+            "heldPrimary": 16,
+            "backupCopies": 26,
+            "memoryMatches": true,
+            "savedMatches": false
+          },
+          {
+            "id": "dbf1cd3bb56e4903b50c22186bfe5000",
+            "local": false,
+            "seedCopies": 42,
+            "primaryRegions": 26,
+            "heldPrimary": 26,
+            "backupCopies": 16,
+            "memoryMatches": true,
+            "savedMatches": false
+          }
+        ]
+      },
+      {
+        "peerId": "dbf1cd3bb56e4903b50c22186bfe5000",
+        "seed": 741902,
+        "udpPort": 47880,
+        "backupsEnabled": true,
+        "backupRevision": 1794073374225,
+        "peers": [
+          {
+            "id": "dbf1cd3bb56e4903b50c22186bfe5000",
+            "local": true,
+            "seedCopies": 42,
+            "primaryRegions": 26,
+            "heldPrimary": 26,
+            "backupCopies": 16,
+            "memoryMatches": true,
+            "savedMatches": false
+          },
+          {
+            "id": "9dc6498ccfc5437cac0a442fdad0ab5b",
+            "local": false,
+            "seedCopies": 42,
+            "primaryRegions": 16,
+            "heldPrimary": 16,
+            "backupCopies": 26,
+            "memoryMatches": true,
+            "savedMatches": false
+          }
+        ]
+      }
+    ]
+  }
+]

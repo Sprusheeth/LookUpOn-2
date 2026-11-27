@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LookUpOn · Network observatory</title><link rel="stylesheet" href="/style.css"><script type="module" src="/app.js"></script></head>
+<body>
+<aside class="sidebar">
+  <a class="brand" href="/" aria-label="LookUpOn home"><span class="brand-mark">↗</span><span>LookUpOn<small>NETWORK OBSERVATORY</small></span></a>
+  <div class="nav-label">WORKSPACE</div>
+  <nav aria-label="Dashboard sections">
+    <button data-tab="overview" class="active"><span>◫</span> Overview</button>
+    <button data-tab="live-world"><span>⌖</span> Live world</button>
+    <button data-tab="peers"><span>⌘</span> Peers <b id="nav-peers">0</b></button>
+    <button data-tab="connections"><span>⤨</span> Connections & backups</button>
+    <button data-tab="simulation"><span>▷</span> Failure simulation</button>
+    <button data-tab="regions"><span>▦</span> Regions</button>
+    <button data-tab="replication"><span>▱</span> Replication & saves</button>
+    <button data-tab="activity"><span>≋</span> Activity</button>
+  </nav>
+  <div class="sidebar-bottom"><span class="tiny-led"></span> LOCAL MONITOR<div id="protocol-label">Backup control</div><p>One observer's view of the mesh.<br>No central game server.</p></div>
+</aside>
+<main>
+  <header><div class="breadcrumb">LookUpOn <span>/</span> Operations <span>/</span> <strong id="crumb">Overview</strong></div><div class="live-badge" id="connection">Connecting…</div></header>
+  <div class="page-title"><div><div class="eyebrow">THE WORLD, IN VIEW</div><h1 id="page-heading">Network overview</h1><p id="subtitle">Live peers, region responsibility, and the state they carry.</p></div><button class="secondary" id="export" disabled>↓ Export snapshot</button></div>
+  <section class="toolbar"><label>Observer <select id="session" aria-label="Observer session"><option>Waiting for a game session</option></select></label><div id="world-tag">WORLD —</div><span class="muted" id="freshness">Updated every second</span></section>
+  <section class="policy-bar"><div><strong>World backups</strong><p id="policy-status">Waiting for the updated game</p></div><button id="backup-toggle" class="secondary" disabled aria-pressed="false">Waiting for game</button><small>ON: peers retain seeds and changes. OFF: a departed owner's regions become unavailable after timeout. Applies to this seed across connected peers.</small></section>
+  <div id="alert" role="status" class="alert">Start the updated LookUpOn game to receive live telemetry.</div>
+  <section class="metrics" aria-label="Network metrics">
+    <article><span>CONNECTED PEERS</span><strong id="metric-peers">—</strong><small id="peer-note">Waiting for an observer</small></article>
+    <article><span>LOADED RENDER TILES</span><strong id="metric-chunks">—</strong><small id="chunk-note">42 regions × 64 tiles = 2,688 tiles</small></article>
+    <article><span>SHARED BEACONS</span><strong id="metric-beacons">—</strong><small>Mutable state · terrain is generated</small></article>
+    <article><span>MATCHING REMOTE SAVES</span><strong id="metric-backups">—</strong><small>Recent peer reports, not verified disks</small></article>
+  </section>
+  <section id="tab-overview" class="tab-content">
+    <div class="overview-grid"><article class="card map-card"><div class="card-head"><div><h2>World regions</h2><p>10 km × 10 km · 7 × 6 regions · red means unavailable</p></div><select id="zoom" aria-label="Map area"><option value="world">Whole battlefield</option><option value="region">Selected region / 64 tiles</option></select></div><div class="map-wrap"><svg id="map" viewBox="0 0 900 420" role="img" aria-label="Live peer positions and chunk ownership"></svg><div id="map-empty">Waiting for terrain telemetry</div></div><div class="map-legend"><span><i class="legend-square"></i> Local primary</span><span><i class="legend-square blue"></i> Remote primary</span><span>● Peer position</span><span>＋ Beacon</span><span id="map-center"></span></div></article>
+    <article class="card detail-card"><div class="card-head"><div><h2>Region inspector</h2><p>Seed storage & availability</p></div><span id="recipe-tag" class="tag">RECIPE</span></div><div id="region-detail" class="detail-body"><p class="muted">Select a region on the map.</p></div><div class="callout">Each region has its own seed and 64 rendering tiles. ON replicates seed manifests to peers. OFF prevents replica retention and freezes regions whose primary leaves.</div></article></div>
+    <article class="card peer-card"><div class="card-head"><div><h2>Peers in view</h2><p>World coordinates and reported state</p></div><button class="text-button" id="view-peers">View all peers ↗</button></div><div id="overview-peers" class="table-wrap"></div></article>
+  </section>
+  <section id="tab-live-world" class="tab-content" hidden>
+    <div class="live-world-grid">
+      <article class="card">
+        <div class="card-head"><div><h2>42-region availability</h2><p>Live player positions, independent seeds, and reported seed copies</p></div><span id="live-world-count" class="tag">Waiting for game</span></div>
+        <div class="live-map-wrap"><svg id="live-world-map" viewBox="0 0 770 540" role="group" aria-label="Interactive map of 42 regions and live players"></svg></div>
+        <div class="map-legend"><span><i class="legend-square"></i> Multiple copies</span><span><i class="legend-square single"></i> One copy</span><span><i class="legend-square lost"></i> Unavailable</span><span><i class="legend-square unknown"></i> Unconfirmed</span><span>◆ Player</span><span id="live-marker-legend">North (+Z) ↑</span></div>
+      </article>
+      <article class="card"><div class="card-head"><h2>Selected region</h2></div><div class="detail-body" id="live-region-detail">Select a region to inspect it.</div></article>
+    </div>
+    <article class="card peer-card"><div class="card-head"><div><h2>Players and peer controls</h2><p>Local sessions can be controlled here. Disconnect stops that player's UDP networking and leaves the game running.</p></div></div><div class="table-wrap" id="live-player-table"></div><p class="live-control-result muted" id="live-control-result" role="status"></p></article>
+    <article class="card peer-card"><div class="card-head"><div><h2>Region seed inventory</h2><p>Primary ownership, confirmed holders, and availability from the selected observer</p></div></div><div class="table-wrap" id="live-region-table"></div></article>
+  </section>
+  <section id="tab-peers" class="tab-content" hidden><article class="card"><div class="card-head"><div><h2>Peer directory</h2><p>Coordinates are in-game metres. Each peer reports its region seed copies and backup policy.</p></div><input id="peer-search" placeholder="Filter ID or endpoint" aria-label="Filter peers"></div><div id="all-peers" class="table-wrap"></div></article></section>
+  <section id="tab-connections" class="tab-content" hidden>
+    <div class="lab-grid"><article class="card"><div class="card-head"><div><h2>Direct peer connections</h2><p>Links reported by the selected observer; other peer-to-peer links are unknown.</p></div><span class="tag">LIVE TELEMETRY</span></div><svg id="connection-map" viewBox="0 0 760 340" role="img" aria-label="Observer and its direct peer connections"></svg><div class="callout" id="connection-note">Waiting for a game observer.</div></article><article class="card"><div class="card-head"><h2>Backup coverage</h2></div><div id="backup-coverage" class="detail-body">Waiting for manifests.</div></article></div>
+    <article class="card peer-card"><div class="card-head"><div><h2>What each peer carries</h2><p>Primary and backup copies are counted from reported region manifests. Select a peer for the exact region list.</p></div></div><div id="peer-storage" class="table-wrap"></div><div id="peer-storage-detail" class="detail-body"></div><div class="callout">Use Live world to change retention for a local game session or disconnect it. Seed inventories and saved-state fingerprints come from peer reports.</div></article>
+  </section>
+  <section id="tab-simulation" class="tab-content" hidden>
+    <div class="simulation-banner"><strong>ISOLATED SIMULATION</strong><span>Four virtual peers · no real players or save files are changed</span></div>
+    <article class="card"><div class="card-head"><div><h2>Peer failure laboratory</h2><p>Start with replicated state, disable retention on individual peers, then disconnect an owner.</p></div><div class="lab-actions"><button class="secondary" id="sim-reset">Reset</button><button class="secondary" id="sim-all-on">All backups ON</button><button class="secondary" id="sim-all-off">All backups OFF</button><button class="secondary" id="sim-compare">Compare ON vs OFF</button></div></div><div id="sim-metrics" class="sim-metrics" aria-live="polite"></div><div id="sim-peers" class="sim-peers"></div><div class="callout">The simulator advances through the 8-second timeout immediately. Each simulated region contains a seed and one example world change. Use Live world to run the failure trial with connected players.</div></article>
+    <div class="lab-grid peer-card"><article class="card"><div class="card-head"><div><h2>42-region availability</h2><p>Green: multiple online copies · amber: single copy · red: unavailable</p></div><span class="tag" id="sim-clock">T + 0 s</span></div><div id="sim-regions" class="sim-regions"></div><div class="table-wrap" id="sim-matrix"></div></article><article class="card"><div class="card-head"><h2>Simulation events</h2></div><ol id="sim-events" class="events"></ol></article></div>
+    <article class="card peer-card" id="sim-comparison" hidden><div class="card-head"><h2>Same owner failure, two policies</h2></div><div class="table-wrap" id="sim-comparison-table"></div><div class="callout">A deterministic model, not a live network test. See Connections & backups for actual game reports. Simulated changes are independent of terrain generation and rendering.</div></article>
+  </section>
+  <section id="tab-regions" class="tab-content" hidden><article class="card"><div class="card-head"><div><h2>42 regions / 2,688 rendering tiles</h2><p>Independent seed per region · actual reported seed holders · owner-loss availability</p></div><input id="region-search" placeholder="Filter region X, Z" aria-label="Filter regions"></div><div id="all-regions" class="table-wrap"></div></article></section>
+  <section id="tab-replication" class="tab-content" hidden><div class="replication-grid"><article class="card"><div class="card-head"><div><h2>Replica convergence</h2><p>Whole beacon-store fingerprints, refreshed with peer heartbeats</p></div></div><div id="replicas" class="table-wrap"></div><div class="callout">A matching fingerprint means the reported beacon store matches this observer. Seed holders are reported separately per region. Reports are trusted-LAN telemetry, not authenticated storage proofs. Copies on one laptop do not protect against laptop failure.</div></article><article class="card"><div class="card-head"><h2>Local persistence</h2></div><div id="persistence" class="detail-body"></div></article></div><article class="card limits"><h2>World limits in this build</h2><p>The battlefield is exactly 10 km × 10 km, with 42 independent regions arranged 7 × 6. Each region is divided into 8 × 8 rendering tiles, for 2,688 tiles total. Near, medium and distant tiles use different mesh detail; only nearby tiles have terrain collision.</p><p>Backups ON retains seed manifests and world changes across peers. OFF keeps only an owner’s active seeds and changes; regions become unavailable when that owner expires. Enabling backups later cannot recreate lost changes. Gameplay elimination does not close a peer’s network process.</p></article></section>
+  <section id="tab-activity" class="tab-content" hidden><article class="card"><div class="card-head"><div><h2>Membership activity</h2><p>Most recent 64 events from this observer · timestamps in UTC</p></div><span id="traffic" class="tag"></span></div><ol id="events" class="events"></ol></article></section>
+  <footer><span>LOOKUPON / DISTRIBUTED WORLD LAB</span><span>Local telemetry · updates every 1 s · stale after 5 s</span></footer>
+</main>
+</body></html>

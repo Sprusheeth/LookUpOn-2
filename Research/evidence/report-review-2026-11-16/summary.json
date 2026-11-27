@@ -1,0 +1,99 @@
+{
+  "date": "2026-11-16",
+  "unity": "6000.5.2f1",
+  "worldRecipe": 3,
+  "protocol": 4,
+  "finalManagedAssemblySha256": "70d4acf9378fd4743990ea169ab59207369004230ff77b8648a65f87a3f35982",
+  "archivedManagedAssemblySha256": "61e3a2e10220fbfe857ca6b82940deab9b075bfd226a1a6aea68ce1b840bf08a",
+  "sourceSha256": "698722c7c30ab05db83eb6b0600b9a3c5200df66ea0746efc9c44130512a4af3",
+  "adminSha256": "7719139740d3e57764deeda27a8e9899cd40a94fb1d96df8f1f6c6e72c1c8b04",
+  "validatorAssertions": 521,
+  "fixedIdTrials": [
+    {
+      "trial": "1",
+      "policy": "ON",
+      "owned": "30",
+      "missing": "0",
+      "beacons": "1"
+    },
+    {
+      "trial": "1",
+      "policy": "OFF",
+      "owned": "30",
+      "missing": "30",
+      "beacons": "0"
+    },
+    {
+      "trial": "2",
+      "policy": "OFF",
+      "owned": "30",
+      "missing": "30",
+      "beacons": "0"
+    },
+    {
+      "trial": "2",
+      "policy": "ON",
+      "owned": "30",
+      "missing": "0",
+      "beacons": "1"
+    },
+    {
+      "trial": "3",
+      "policy": "ON",
+      "owned": "30",
+      "missing": "0",
+      "beacons": "1"
+    },
+    {
+      "trial": "3",
+      "policy": "OFF",
+      "owned": "30",
+      "missing": "30",
+      "beacons": "0"
+    },
+    {
+      "trial": "4",
+      "policy": "OFF",
+      "owned": "30",
+      "missing": "30",
+      "beacons": "0"
+    },
+    {
+      "trial": "4",
+      "policy": "ON",
+      "owned": "30",
+      "missing": "0",
+      "beacons": "1"
+    },
+    {
+      "trial": "5",
+      "policy": "ON",
+      "owned": "30",
+      "missing": "0",
+      "beacons": "1"
+    },
+    {
+      "trial": "5",
+      "policy": "OFF",
+      "owned": "30",
+      "missing": "30",
+      "beacons": "0"
+    }
+  ],
+  "saveReadback": {
+    "seed": 58162028,
+    "beaconDigest": "f98036c88f80bf0b2c338328d4907d5419edf985b0c34d4777147803984ae2ad",
+    "seedRecords": 42,
+    "beacons": 1
+  },
+  "route": {
+    "duration": "24.004",
+    "frames": "4145",
+    "averageFps": "172.68",
+    "onePercentLowFps": "41.03",
+    "receiveBytesPerSecond": "24512",
+    "sendBytesPerSecond": "109767",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700HX",
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU"
+  }
+}

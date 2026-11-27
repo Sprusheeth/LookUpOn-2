@@ -1,0 +1,229 @@
+{
+  "prepared": "2026-11-07",
+  "scope": "Recorded Unity/game evidence plus Node checks re-executed during documentation preparation. Unity was not rebuilt for this documentation change.",
+  "environment": {
+    "editor": "6000.5.2f1",
+    "worldRecipe": 2,
+    "protocol": 3,
+    "telemetrySchema": 2,
+    "node": "v24.14.0",
+    "operatingSystem": "win32",
+    "hardware": "Not recorded in selected trials",
+    "topology": "Two game processes on one Windows laptop, loopback"
+  },
+  "observations": {
+    "unityAssertionsRecorded": 631,
+    "nodeTests": 9,
+    "lifecycleTrialsSelected": 2,
+    "persistenceLimitation": "Both selected lifecycle trials reported AppData save access denied; disk durability is not established."
+  },
+  "files": [
+    {
+      "path": "ProjectSettings/ProjectVersion.txt",
+      "bytes": 83,
+      "sha256": "0bd10e7d104bdb396187fb2b4c47d1f5494041120bd8fe22d47c678939c2bc47"
+    },
+    {
+      "path": "Packages/manifest.json",
+      "bytes": 247,
+      "sha256": "d0798883c4000c591c8947fef0c69fa7435051c5c07c4ea74cf312b8bc8cf112"
+    },
+    {
+      "path": "Assets/Scripts/Core/WorldMath.cs",
+      "bytes": 4534,
+      "sha256": "6aa3b2bc3d4fda738fda77f5b8cd5c9cf39900279efb4efa0c4698a967574192"
+    },
+    {
+      "path": "Assets/Scripts/Core/HashRing.cs",
+      "bytes": 1330,
+      "sha256": "915ae9fdba0a1f67763bbd58936f3e7b9795fda21c11fe458041750a5e969e3a"
+    },
+    {
+      "path": "Assets/Scripts/Core/RegionCatalog.cs",
+      "bytes": 3841,
+      "sha256": "3a22336f1ec3c7b1219153eb56e8cd015437df6e7afc52dcbad5901f114dccb7"
+    },
+    {
+      "path": "Assets/Scripts/Core/BeaconStore.cs",
+      "bytes": 2697,
+      "sha256": "3dd844df23b9a931750e89fcb42fef7cdfd01bd3bedb8c8383d043873e3d6b85"
+    },
+    {
+      "path": "Assets/Scripts/Networking/PeerNetwork.cs",
+      "bytes": 10057,
+      "sha256": "32bcc88817a2ab8fbf7d977d68637825cd383dd17662f7eda5be1f408d2c4cef"
+    },
+    {
+      "path": "Assets/Scripts/World/ChunkWorld.cs",
+      "bytes": 11042,
+      "sha256": "c4da46282165546fd3c56d39f9c7e3f46424b3f91d4182f85e3f966387e40768"
+    },
+    {
+      "path": "Assets/Scripts/LookUpOnGame.cs",
+      "bytes": 21606,
+      "sha256": "f55516e976c0024e69bf8227063a32411c04380e8636bbd77c0ee645f5cc92bd"
+    },
+    {
+      "path": "Assets/Scripts/Monitoring/AdminControl.cs",
+      "bytes": 1728,
+      "sha256": "6208aee2326044db98d26341bd6cbb9ad47a523c35f9e80f37f94e2bfb1221bd"
+    },
+    {
+      "path": "Assets/Scripts/Monitoring/TelemetryWriter.cs",
+      "bytes": 6431,
+      "sha256": "58a8b9f841ffc2eef66fd2a9522b8e75a7665c3640c01811105b84f1a99cc5c6"
+    },
+    {
+      "path": "Assets/Editor/ProjectSetup.cs",
+      "bytes": 12176,
+      "sha256": "27b69f89bbc32c373e8d05498db6dae8052606e900268ae2636d10c0ac9d7dd7"
+    },
+    {
+      "path": "AdminPanel/server.mjs",
+      "bytes": 5921,
+      "sha256": "79692265ae41869e99c611f82d7f765c3c5d3bda9085b3259d7c7880848da3fc"
+    },
+    {
+      "path": "AdminPanel/dist/app.js",
+      "bytes": 15181,
+      "sha256": "101dbe9b4ae7f05642e10955a428f796a414e55f83117436fb57bf9fb5fdaa0b"
+    },
+    {
+      "path": "AdminPanel/dist/peer-lab.mjs",
+      "bytes": 8448,
+      "sha256": "a8a2b97f716b01487370949bd8be07198601fe8cbaad7fde54bcca54d3dd3891"
+    },
+    {
+      "path": "AdminPanel/dist/peer-status.mjs",
+      "bytes": 634,
+      "sha256": "5055489d0b15b4343f0b561fd3e320394e1b6380515efd53512ff1d0cf136281"
+    },
+    {
+      "path": "AdminPanel/dist/simulation.mjs",
+      "bytes": 3657,
+      "sha256": "2c60a5d9c1be25c534473c98a2aee0ebb1411edfb0ff68d0bbfeb9146807ce24"
+    },
+    {
+      "path": "AdminPanel/server.test.mjs",
+      "bytes": 3785,
+      "sha256": "3f75a48c01dafefb32f9c7673971b20c795234227166f1290d4f2a335a7d7c7a"
+    },
+    {
+      "path": "AdminPanel/simulation.test.mjs",
+      "bytes": 3253,
+      "sha256": "1d75d41a63a77a9972f0b1c74227da854309d8022d2e106b938895e21589faa3"
+    },
+    {
+      "path": "Tools/Test-TwoPeers.ps1",
+      "bytes": 3280,
+      "sha256": "de6f0260201de25289334ce2fd8aebe1da44324f9409233718510e6c676be969"
+    },
+    {
+      "path": "Tools/Test-BackupPolicy.ps1",
+      "bytes": 5341,
+      "sha256": "91af170f2e28344c780dc53103377530428245a62e08bf3814411935347f76c9"
+    },
+    {
+      "path": "Builds/validation.txt",
+      "bytes": 218,
+      "sha256": "177efd13b27627bd93d1c10ce3ded425fc750b4f110f3e37bc7e6580501e51f0"
+    },
+    {
+      "path": "Builds/Smoke/b787309b-peer-a.json",
+      "bytes": 138,
+      "sha256": "05c915f51384f8d24db64eeec76b74c546c35c92a59b2916423c47b5addaafde"
+    },
+    {
+      "path": "Builds/Smoke/b787309b-peer-b.json",
+      "bytes": 138,
+      "sha256": "a93aa3023c957ee3c6e275c6b7e817b0bba7c2c89375a84277d1389b6cdc47c6"
+    },
+    {
+      "path": "Builds/BackupPolicy/78b4b1a9-results.json",
+      "bytes": 429,
+      "sha256": "9c1cf13f5db36f2f16194f70e5517a22e0af02958ea74340ad6b2828c48c130f"
+    },
+    {
+      "path": "Builds/BackupPolicy/78b4b1a9-inventory-False.json",
+      "bytes": 46200,
+      "sha256": "a7ab45fa37523accd4945567cd5c2ffb4378a87efac36686f2837da95026613f"
+    },
+    {
+      "path": "Builds/BackupPolicy/78b4b1a9-inventory-True.json",
+      "bytes": 54107,
+      "sha256": "26e7da6c25516941f4043b640cf2f68bed4eb378f64befba507ad687645e508e"
+    }
+  ],
+  "documentationArtifacts": [
+    {
+      "path": "README.md",
+      "bytes": 18634,
+      "sha256": "8fb185c67cfdb776a43c892351f9f8fa1164eb2d2f06b7a3ee17893bdfc0bee3"
+    },
+    {
+      "path": "ROADMAP.md",
+      "bytes": 4372,
+      "sha256": "b4eda4e01fda4a2680516f50a6bfab8b8afa1bbd3001c05286d3e5de2d9ccfd9"
+    },
+    {
+      "path": "VERIFICATION.md",
+      "bytes": 2508,
+      "sha256": "f7fa0f88fa3e0498ce8e5149f533d9f30f2df5a49c25b63e4fdbd109eab69bfc"
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "bytes": 8155,
+      "sha256": "2e3c519206ac1e678049ff93fcff0db88019f5e27d2e4de86db502647e4ca41e"
+    },
+    {
+      "path": "docs/TESTING.md",
+      "bytes": 8138,
+      "sha256": "b7ddbe49a146dc97c72561dffaa450ec6e795330d9781fdd0a426fdd3cf8bab5"
+    },
+    {
+      "path": "Research/README.md",
+      "bytes": 3190,
+      "sha256": "c9850c492941cd5c260c4bdad91ceaaa01bf38c1c6b2a5232acd3111f207aa5c"
+    },
+    {
+      "path": "Research/LookUpOn-Research-Paper.md",
+      "bytes": 28735,
+      "sha256": "f4367347597f96f8a89ebb31cec4f05082b702e6c2437d17ab0323802183f6fe"
+    },
+    {
+      "path": "Research/LookUpOn-Research-Paper.pdf",
+      "bytes": 36157,
+      "sha256": "a2a5e32c572b27423b242655fb7ad57d45ee19aedc81d9da42078d84378903a5"
+    },
+    {
+      "path": "Research/references.bib",
+      "bytes": 3437,
+      "sha256": "7a2722ce4a924e0bf6392d290e4e61e462cf076eaf093753fbbab71d5c4d546e"
+    },
+    {
+      "path": "Research/sources.json",
+      "bytes": 3912,
+      "sha256": "49aaf7a85a06977df2961173e55efd32f7471732b25dfa5636d6f7f132d76c7f"
+    },
+    {
+      "path": "Research/requirements.txt",
+      "bytes": 143,
+      "sha256": "4c8649494c02585e5af2aa4b770ce41ad154aa2e673e544481325e12325563f5"
+    },
+    {
+      "path": "Tools/Build-ResearchPaper.py",
+      "bytes": 9386,
+      "sha256": "0394503c7097551f35191520622a01f769eb230c9d5f964f284d13a5f0116a79"
+    },
+    {
+      "path": "Research/evidence/node-tests.txt",
+      "bytes": 920,
+      "sha256": "fc061e68e6617f245df363b3175b5ce96774ce08f429710a199b070b59e63be4"
+    },
+    {
+      "path": "Research/evidence/inventory-summary.json",
+      "bytes": 3549,
+      "sha256": "7b072dae87f82948c04d828947c3343f2191b59b855cb6d8a1dc70f056a6441a"
+    }
+  ]
+}

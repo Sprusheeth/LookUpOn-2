@@ -1,0 +1,22 @@
+{
+  "worlds": [
+    {
+      "seed": 2026,
+      "backupsEnabled": true,
+      "revision": 1794071923803,
+      "authority": "a3f131e218c44f8bb01753b28ca552da"
+    },
+    {
+      "seed": 741901,
+      "backupsEnabled": false,
+      "revision": 1794073359081,
+      "authority": "9114651cee5f4f5f91de931b441cf684"
+    },
+    {
+      "seed": 741902,
+      "backupsEnabled": true,
+      "revision": 1794073374225,
+      "authority": "67bde79b3f164077bb0e62e7ee52e428"
+    }
+  ]
+}

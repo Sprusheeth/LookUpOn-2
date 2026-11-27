@@ -1,0 +1,18 @@
+✔ collects multiple observers, labels stale data and ignores partial writes (12.9104ms)
+✔ backup controls persist, increase revision and reject foreign commands (50.0016ms)
+✔ serves real dashboard and read-only API with origin checks (16.3067ms)
+✔ peer commands require a fresh matching local run and acknowledge one revision at a time (19.7464ms)
+✔ all replicated regions survive an owner timeout and reassignment (4.1913ms)
+✔ OFF prunes replicas, exposes departed regions, and ON cannot invent lost state (1.7487ms)
+✔ a single remaining backup holder protects regions until it also fails (1.1065ms)
+✔ all peers offline means no available online copies; reset restores independent state (2.207ms)
+✔ comparison is reproducible and hash-ring ordering is independent of input order (2.7475ms)
+✔ live inventories use holder evidence; stale peers cannot establish redundant coverage (0.2684ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 184.759

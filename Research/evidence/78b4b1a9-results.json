@@ -1,0 +1,18 @@
+[
+  {
+    "backups": false,
+    "passed": true,
+    "departedOwnerRegions": 12,
+    "unavailableAfterFailure": 12,
+    "loadedTiles": 110,
+    "saveStatus": "Save failed: Access to the path is denied."
+  },
+  {
+    "backups": true,
+    "passed": true,
+    "departedOwnerRegions": 16,
+    "unavailableAfterFailure": 0,
+    "loadedTiles": 121,
+    "saveStatus": "Save failed: Access to the path is denied."
+  }
+]

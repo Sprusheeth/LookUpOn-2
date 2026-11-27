@@ -1,0 +1,5 @@
+# Paper generation / PDF verification only. Not required by the game or admin.
+reportlab==4.4.9
+pypdf==6.21.4
+pypdfium2==5.14.0
+Pillow==13.0.0

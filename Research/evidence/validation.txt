@@ -1,0 +1,1 @@
+PASS: 631 assertions. 10 km battlefield, 42 seeds / 2688 tiles, regional seams, mixed LOD stitching, hash ring, UDP synchronization, live admin policy propagation, backups ON recovery and backups OFF region/state loss.

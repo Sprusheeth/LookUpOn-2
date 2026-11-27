@@ -1,0 +1,117 @@
+{
+  "prepared": "2026-11-08",
+  "sources": [
+    {
+      "id": 1,
+      "key": "togelius2011pcg",
+      "url": "https://www.um.edu.mt/library/oar/handle/123456789/29609",
+      "kind": "Institutional publication record",
+      "supports": "Taxonomy and scope of search-based procedural generation.",
+      "boundary": "Restricted full text was not used; no claim that LookUpOn implements search-based PCG.",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": 2,
+      "key": "karger1997consistent",
+      "url": "https://people.csail.mit.edu/karger/Papers/web.pdf",
+      "metadata": "https://doi.org/10.1145/258533.258660",
+      "kind": "Author-hosted original paper and publisher metadata",
+      "supports": "Consistent hashing as a placement technique with limited reassignment.",
+      "boundary": "Does not establish consensus or prove this implementation is balanced or optimal.",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": 3,
+      "key": "bharambe2006colyseus",
+      "url": "https://www.usenix.org/legacy/event/nsdi06/tech/full_papers/bharambe/bharambe_html/",
+      "metadata": "https://www.usenix.org/conference/nsdi-06/presentation/colyseus-distributed-architecture-online-multiplayer-games",
+      "kind": "Original conference paper",
+      "supports": "Separation of placement, discovery, and replica synchronization in distributed games.",
+      "boundary": "Colyseus performance results are not transferred to LookUpOn.",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": 4,
+      "key": "decandia2007dynamo",
+      "url": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf",
+      "metadata": "https://www.amazon.science/publications/dynamo-amazons-highly-available-key-value-store",
+      "kind": "Author-hosted original paper and official research record",
+      "supports": "Partitioning/replication/failure recovery design context.",
+      "boundary": "LookUpOn does not implement Dynamo or inherit its storage guarantees.",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": 5,
+      "key": "shapiro2011crdt",
+      "url": "https://perso.lip6.fr/Marc.Shapiro/papers/2011/CRDTs_SSS-2011.pdf",
+      "kind": "Author-hosted original paper",
+      "supports": "Formal convergence conditions motivate explicit limits on CRDT claims.",
+      "boundary": "Current bounded, OFF-pruned beacon store is not asserted to satisfy full CRDT guarantees.",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": 6,
+      "key": "das2002swim",
+      "url": "https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf",
+      "metadata": "https://research.google/pubs/swim-scalable-weakly-consistent-infection-style-process-group-membership-protocol/",
+      "kind": "Original paper and author research record",
+      "supports": "Separation of failure detection/dissemination and suspicion/indirect probing.",
+      "boundary": "SWIM is related/future work; the prototype uses a direct timeout.",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": 7,
+      "key": "eggert2017udp",
+      "url": "https://www.rfc-editor.org/rfc/rfc8085",
+      "kind": "Official IETF best current practice",
+      "supports": "UDP congestion, message-size, and reliability design obligations.",
+      "boundary": "Does not certify prototype transport; record notes RFC 8899 update.",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": 8,
+      "key": "unityMesh",
+      "url": "https://docs.unity.com/en-us/engine/6000.0/script-reference/unityengine/mesh",
+      "kind": "Official engine API documentation",
+      "supports": "Runtime mesh construction API background.",
+      "boundary": "API reference version differs from pinned 6000.5.2f1; no performance conclusion inferred.",
+      "accessed": "2026-11-07"
+    },
+    {
+      "id": 9,
+      "key": "stoica2001chord",
+      "url": "https://people.csail.mit.edu/karger/Papers/chord.pdf",
+      "supports": "Distributed routing versus local placement",
+      "boundary": "No Chord routing or logarithmic guarantee claimed for LookUpOn.",
+      "accessed": "2026-11-08",
+      "kind": "Primary paper or official standard"
+    },
+    {
+      "id": 10,
+      "key": "gilbert2002cap",
+      "url": "https://groups.csail.mit.edu/tds/papers/Gilbert/Brewer6.pdf",
+      "supports": "Consistency and availability under partitions",
+      "boundary": "No formal CAP classification claimed.",
+      "accessed": "2026-11-08",
+      "kind": "Primary paper or official standard"
+    },
+    {
+      "id": 11,
+      "key": "ongaro2014raft",
+      "url": "https://www.usenix.org/node/184041.",
+      "supports": "Replicated-log consensus differs from revision ordering",
+      "boundary": "Raft is related/future work, not implemented.",
+      "accessed": "2026-11-08",
+      "kind": "Primary paper or official standard"
+    },
+    {
+      "id": 12,
+      "key": "fairhurst2020dplpmtud",
+      "url": "https://www.rfc-editor.org/rfc/rfc8899.html",
+      "supports": "Datagram MTU discovery background",
+      "boundary": "No DPLPMTUD implementation or WAN test claimed.",
+      "accessed": "2026-11-08",
+      "kind": "Primary paper or official standard"
+    }
+  ]
+}
